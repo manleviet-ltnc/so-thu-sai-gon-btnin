@@ -48,7 +48,6 @@ namespace SoThuXiGon
                 lb.Items.Add(e.Data.GetData(DataFormats.Text));
             }
         }
-
         private void Save(object sender, EventArgs e)
         {
             // Mo tap tin
@@ -60,9 +59,6 @@ namespace SoThuXiGon
 
             write.Close();
         }
-
-
-
         private void menuClose_Click(object sender, EventArgs e)
         {
             Close();
@@ -106,7 +102,13 @@ namespace SoThuXiGon
         {
             timer1.Enabled = true;
         }
-    }    
-
+   
+        private void menuDelete_Click(object sender, EventArgs e)
+        {
+            if (lstDanhSach.SelectedIndex != -1)
+                lstDanhSach.Items.Remove(lstDanhSach.SelectedItem);
+        }
+    }
+    }
 
 
